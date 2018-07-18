@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PositionReporter.h"
+//#include "BuildingEscape.h"
 
 
 // Sets default values for this component's properties
@@ -18,7 +19,11 @@ UPositionReporter::UPositionReporter()
 void UPositionReporter::BeginPlay()
 {
 	Super::BeginPlay();
+	FString ObjectName = GetOwner()->GetName();
+	FVector ObjectPos = GetOwner()->GetTargetLocation();
+	FString ObjectPosString = ObjectPos.ToString();
 
+		UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *ObjectName, *ObjectPosString);
 	// ...
 	
 }
