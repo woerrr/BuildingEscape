@@ -20,10 +20,10 @@ void UPositionReporter::BeginPlay()
 {
 	Super::BeginPlay();
 	FString ObjectName = GetOwner()->GetName();
-	FVector ObjectPos = GetOwner()->GetTargetLocation();
-	FString ObjectPosString = ObjectPos.ToString();
+	FString ObjectPos = GetOwner()->GetTargetLocation().ToString();
+	
 
-		UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *ObjectName, *ObjectPosString);
+		//UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *ObjectName, *ObjectPos);
 	// ...
 	
 }
